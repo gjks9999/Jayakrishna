@@ -2,12 +2,88 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr  1fr 1fr ;
+}
+
+.styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgb(49, 121, 255);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.styled:hover {
+    background-color: rgb(106, 149, 228)
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+        </style>
 <title>Jaya Krishna </title>
 </head>
 <body>
 
-<div >
-    <iframe src="slide.pdf"
+    <div class="wrapper">
+        <div>
+            
+            <button class="favorite styled" type="button"  
+            onclick="ShowFull()"
+            > Full Resume.pdf 😃</button>
+        </div>
+        <div>
+            <button class="favorite styled" type="button"
+            onclick="ShowOne()"
+            > One slider profile.pdf 😉</button>
+        </div>
+
+        <div>
+            <button class="favorite styled" type="button"
+            
+            > <a href="mailto:Jayakrishnaswamy.g@gmail.com"> Drop me an email 😇 </a>  </button>
+        </div>
+
+        <div>
+            <button class="favorite styled" type="button"
+           
+            > <a  href="https://www.linkedin.com/in/gaddejayakrishnaswamy/"> Linkedin portal 😎 </a>  </button>
+        </div>
+
+        <div>
+            <button class="favorite styled" type="button"
+           
+            > <a  href="https://web.whatsapp.com/send?phone=919290040510"> whatsapp me 😊 </a>  </button>
+        </div>
+
+        <div>
+            <button class="favorite styled" type="button"
+            onclick="alert('Hello There..! \nThis website to download Jaya Krishna`s Resume. \nClick on available buttons to navigate ☺☺ ')"
+            > About this page.! 😋 </button>
+        </div>
+       
+      </div>
+
+      
+
+<div  id="One" style="display:none" >
+    <br>
+    <iframe src="One slider.pdf"
     style="width:100%; height:700px;" 
     
     frameborder="0" 
@@ -19,6 +95,41 @@
     ></iframe>
     
 </div>
+
+<div  id="Full"  >
+    <br>
+    <iframe src="Full Resume.pdf"
+    style="width:100%; height:700px;" 
+    
+    frameborder="0" 
+    marginheight="0" 
+    marginwidth="0" 
+    width="100%" 
+    height="100%" 
+    scrolling="auto"
+    ></iframe>
+    
+</div>
+
+
+<script>
+    function ShowFull() {
+      var x = document.getElementById("Full");
+      var y = document.getElementById("One");
+      x.style.display = "block";
+      y.style.display = "none";
+     
+    }
+
+    function ShowOne() {
+      var x = document.getElementById("Full");
+      var y = document.getElementById("One");
+      x.style.display = "none";
+      y.style.display = "block";
+    }
+
+   
+    </script>
 
 </body>
 </html>
